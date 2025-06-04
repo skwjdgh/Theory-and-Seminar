@@ -7,8 +7,8 @@
   </a>
 </h1>
 
-<p align>
-  <img src = "https://capsule-render.vercel.app/api?type=blur&height=200&color=gradient&text=SEMINAR&descAlign=59&section=header">
+<p align = "center">
+  <img align = "center" src = "https://capsule-render.vercel.app/api?type=blur&height=200&color=gradient&text=Theory%20and%20Seminar&descAlign=59&section=header">
 
 
 ## 🗂 문서 개요
