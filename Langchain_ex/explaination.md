@@ -11,20 +11,20 @@
 # 파이썬이 설치되어 있다는 가정하에 작성되어 있습니다.
 # 필요한 주요 라이브러리르 한번에 받는 코드입니다.
 
-pip install streamlit streamlit-mic-recorder openai-whisper langchain langchain-community langchain-ollama faiss-cpu edge-tts
+pip install streamlit whisper streamlit-mic-recorder langchain langchain-ollama faiss-cpu pyttsx3
 
 ```
 
-| 라이브러리 이름              | 설명 및 주요 용도                                    |
-|---------------------------|----------------------------------------------------|
-| streamlit                 | 웹 기반 대화형 앱 개발 프레임워크                       |
-| streamlit-mic-recorder    | 웹/모바일에서 마이크 입력 및 녹음 지원                   |
-| openai-whisper            | 오픈소스 음성 인식(STT) 엔진 (로컬/웹 기반)             |
-| langchain                 | 대형 언어모델(LLM) 기반 애플리케이션 개발 프레임워크      |
-| langchain-community       | LangChain의 커뮤니티 확장 모듈                        |
-| langchain-ollama          | LangChain과 Ollama 모델 연동 지원                     |
-| faiss-cpu                 | 벡터 검색 및 유사도 계산용 라이브러리                   |
-| edge-tts                  | Microsoft Edge 기반 텍스트-음성 변환(TTS) 엔진         |
+| 라이브러리 이름            | 설명 및 주요 용도                                                                                    |
+|-------------------------|-----------------------------------------------------------------------------------------------------|
+| streamlit               | 파이썬 기반 웹 대화형 앱 개발 프레임워크. 머신러닝/데이터사이언스 앱을 손쉽게 만들고 배포할 수 있음.         |
+| whisper                 | OpenAI에서 개발한 오픈소스 음성 인식(STT) 모델. 다양한 언어의 음성을 텍스트로 변환하며, 고성능을 자랑함.      |
+| streamlit-mic-recorder  | 웹/모바일 환경에서 마이크 입력을 받아 녹음하거나, 바로 음성 인식(STT)까지 지원하는 Streamlit 컴포넌트.      |
+| langchain               | 대형 언어모델(LLM) 기반 애플리케이션 개발을 위한 오픈소스 프레임워크. 챗봇, 에이전트 등 LLM 활용 앱 제작에 특화. |
+| langchain-ollama        | LangChain과 Ollama(로컬 LLM 서버) 연동을 지원하는 파트너 패키지. Ollama 모델을 LangChain에서 활용 가능.     |
+| faiss-cpu               | Facebook Research에서 개발한 벡터 검색 및 유사도 계산 라이브러리. 대규모 임베딩 검색에 최적화.             |
+| pyttsx3                 | 오프라인에서 동작하는 파이썬 텍스트-음성 변환(TTS) 라이브러리. 인터넷 연결 없이 다양한 엔진 지원.         |
+
 
 * openai-whisper는 3.11 버전까지 공식적으로 지원됩니다. 3.11 버전으로 다운그레이드를 추천합니다.
 이를 통해 설치하는 과정에서 환경변수 문제로 인한 error이 발생합니다. 이를 해결하기 위해 환경변수에 값을 추가해줘야 합니다.
