@@ -11,13 +11,12 @@ import os
 ################################################################################
 # 2. LangChain 및 Ollama 모듈 로딩
 ################################################################################
-from langchain_community.chat_models import ChatOllama  # Ollama 모델 연동
+from langchain_ollama import ChatOllama, OllamaEmbeddings  # Ollama 모델 연동, 임베딩
 from langchain_core.prompts import ChatPromptTemplate  # 프롬프트 템플릿
 from langchain_core.output_parsers import StrOutputParser  # 출력 파서
 from langchain.agents import Tool, initialize_agent, AgentType  # 에이전트 도구
 from langchain.memory import ConversationBufferMemory  # 대화 메모리 저장
 from langchain.chains import ConversationChain  # 대화형 체인
-from langchain_community.embeddings import OllamaEmbeddings  # 임베딩
 from langchain_community.vectorstores import FAISS  # 벡터 검색
 from langchain_core.documents import Document  # 문서
 from langchain_core.runnables import RunnablePassthrough  # RAG용 흐름 구성
