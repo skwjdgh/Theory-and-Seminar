@@ -33,7 +33,8 @@ pip install streamlit streamlit-mic-recorder openai-whisper pyttsx3 langchain-ol
 
 #### 추가할 경로 - 사용자 이름의 변경이 필요함함
 ```
-C:\Users\\{사용자이름}\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts
+C:\Users\{사용자이름}\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts
+
 
 ```
 - 위의 폴더 경로를 시스템 환경 변수 Path에 추가합니다.
@@ -55,9 +56,9 @@ https://www.gyan.dev/ffmpeg/builds/
 
 # **환경변수 적용을 위해선 반드시 새 창을 열어야 적용됩니다! **
 ```
-streamlit run assistant.py --server.runOnSave=false
+streamlit run main.py
 
-# streamlit run C:\p_assistant\assistant.py --server.runOnSave=false
+# streamlit run C:\p_assistant\main.py
 # 경로에 한글이 들어있을 경우, 에러가 발생합니다.
 ```
 
