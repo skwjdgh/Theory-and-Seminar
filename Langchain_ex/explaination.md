@@ -54,9 +54,9 @@ https://www.gyan.dev/ffmpeg/builds/
 
 # **환경변수 적용을 위해선 반드시 새 창을 열어야 적용됩니다! **
 ```
-streamlit run 경로\assistant.py
+streamlit run assistant.py --server.runOnSave=false
 
-# streamlit run C:\p_assistant\assistant.py
+# streamlit run C:\p_assistant\assistant.py --server.runOnSave=false
 # 경로에 한글이 들어있을 경우, 에러가 발생합니다.
 ```
 
