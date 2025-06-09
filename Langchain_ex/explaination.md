@@ -11,7 +11,7 @@
 # 파이썬이 설치되어 있다는 가정하에 작성되어 있습니다.
 # 필요한 주요 라이브러리르 한번에 받는 코드입니다.
 
-pip install streamlit whisper streamlit-mic-recorder langchain langchain-ollama faiss-cpu pyttsx3
+pip install streamlit streamlit-mic-recorder openai-whisper pyttsx3 langchain-ollama langchain-core langchain-community faiss-cpu
 
 ```
 
