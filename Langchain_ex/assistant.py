@@ -64,7 +64,7 @@ chain = prompt | llm | StrOutputParser()
 ################################################################################
 # 6. 대화 메모리 및 ConversationChain
 ################################################################################
-memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
+memory = ConversationBufferMemory(memory_key="history", return_messages=True)
 conversation = ConversationChain(llm=llm, memory=memory, verbose=True)
 
 ################################################################################
