@@ -4,6 +4,7 @@
 이 프로그램은 랭체인을 활용해 로컬로 동작하는 개인용 비서의 프로토타입 모델입니다.
 이 마크다운 문서는 이 프로그램의 설치 및 구동을 다루고 있습니다.
 
+
 ## 설치 방법
 
 ```
@@ -25,7 +26,7 @@ pip install streamlit streamlit-mic-recorder openai-whisper langchain langchain-
 | faiss-cpu                 | 벡터 검색 및 유사도 계산용 라이브러리                   |
 | edge-tts                  | Microsoft Edge 기반 텍스트-음성 변환(TTS) 엔진         |
 
-
+* openai-whisper는 3.11 버전까지 공식적으로 지원됩니다. 3.11 버전으로 다운그레이드를 추천합니다.
 이를 통해 설치하는 과정에서 환경변수 문제로 인한 error이 발생합니다. 이를 해결하기 위해 환경변수에 값을 추가해줘야 합니다.
 
 
