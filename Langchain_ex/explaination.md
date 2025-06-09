@@ -9,9 +9,10 @@
 
 ```
 # 파이썬이 설치되어 있다는 가정하에 작성되어 있습니다.
-# 필요한 주요 라이브러리르 한번에 받는 코드입니다.
+# 필요한 주요 라이브러리를 한번에 받는 코드입니다.
 
 pip install streamlit streamlit-mic-recorder openai-whisper pyttsx3 langchain-ollama langchain-core langchain-community faiss-cpu
+
 
 ```
 
@@ -26,7 +27,7 @@ pip install streamlit streamlit-mic-recorder openai-whisper pyttsx3 langchain-ol
 | pyttsx3                 | 오프라인에서 동작하는 파이썬 텍스트-음성 변환(TTS) 라이브러리. 인터넷 연결 없이 다양한 엔진 지원.         |
 
 
-* openai-whisper는 3.11 버전까지 공식적으로 지원됩니다. 3.11 버전으로 다운그레이드를 추천합니다.
+* openai-whisper는 3.11 버전까지 공식적으로 지원됩니다만. 3.09 버전 사용을 추천합니다.
 이를 통해 설치하는 과정에서 환경변수 문제로 인한 error이 발생합니다. 이를 해결하기 위해 환경변수에 값을 추가해줘야 합니다.
 
 
