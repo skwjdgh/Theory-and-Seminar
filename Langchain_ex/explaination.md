@@ -32,10 +32,10 @@ pip install streamlit streamlit-mic-recorder openai-whisper pyttsx3 langchain-ol
 
 
 #### 추가할 경로 - 사용자 이름의 변경이 필요함함
+```
+C:\Users\\{사용자이름}\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts
 
-C:\Users\{사용자이름}\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts
-
-
+```
 - 위의 폴더 경로를 시스템 환경 변수 Path에 추가합니다.
 - 명령 프롬프트(cmd) 실행
 - pip list를 통해 확인 혹은 명령어 재실행을 통해 에러 발생 확인인
