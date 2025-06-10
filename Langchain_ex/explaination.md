@@ -11,21 +11,27 @@
 # 파이썬이 설치되어 있다는 가정하에 작성되어 있습니다.
 # 필요한 주요 라이브러리를 한번에 받는 코드입니다.
 
-pip install streamlit streamlit-mic-recorder openai-whisper pyttsx3 langchain-ollama langchain-core langchain-community faiss-cpu
+pip install -r {주소}\requirements.txt
 
 
 ```
 
-| 라이브러리 이름            | 설명 및 주요 용도                                                                                    |
-|-------------------------|-----------------------------------------------------------------------------------------------------|
-| streamlit               | 파이썬 기반 웹 대화형 앱 개발 프레임워크. 머신러닝/데이터사이언스 앱을 손쉽게 만들고 배포할 수 있음.         |
-| whisper                 | OpenAI에서 개발한 오픈소스 음성 인식(STT) 모델. 다양한 언어의 음성을 텍스트로 변환하며, 고성능을 자랑함.      |
-| streamlit-mic-recorder  | 웹/모바일 환경에서 마이크 입력을 받아 녹음하거나, 바로 음성 인식(STT)까지 지원하는 Streamlit 컴포넌트.      |
-| langchain               | 대형 언어모델(LLM) 기반 애플리케이션 개발을 위한 오픈소스 프레임워크. 챗봇, 에이전트 등 LLM 활용 앱 제작에 특화. |
-| langchain-ollama        | LangChain과 Ollama(로컬 LLM 서버) 연동을 지원하는 파트너 패키지. Ollama 모델을 LangChain에서 활용 가능.     |
-| faiss-cpu               | Facebook Research에서 개발한 벡터 검색 및 유사도 계산 라이브러리. 대규모 임베딩 검색에 최적화.             |
-| pyttsx3                 | 오프라인에서 동작하는 파이썬 텍스트-음성 변환(TTS) 라이브러리. 인터넷 연결 없이 다양한 엔진 지원.         |
-
+| 라이브러리 이름            | 설명 및 주요 용도                                                                                      |
+|-------------------------|-------------------------------------------------------------------------------------------------------|
+| langchain-core          | LangChain의 핵심 컴포넌트. LLM 애플리케이션의 체인, 프롬프트, 파서 등 기본 기능 제공.                      |
+| langchain-community     | LangChain 오픈소스 커뮤니티에서 제공하는 다양한 통합 및 커넥터 모음.                                      |
+| langchain-ollama        | LangChain과 Ollama(로컬 LLM 서버) 연동 지원. Ollama 모델을 LangChain에서 직접 호출 가능.                   |
+| langgraph               | LangChain 기반 워크플로우 및 상태 관리 프레임워크. 대화 흐름, 에이전트 논리 등 복잡한 그래프 처리에 특화.     |
+| langsmith               | LangChain 앱의 실험, 평가, 모니터링을 위한 플랫폼 연동 패키지.                                            |
+| faiss-cpu               | Facebook Research 개발 벡터 검색 라이브러리. 대규모 임베딩 벡터 유사도 검색에 최적화(CPU 전용).             |
+| torch                   | 파이토치(Pytorch). 딥러닝 모델 학습 및 추론 프레임워크.                                                   |
+| torchvision             | 파이토치용 컴퓨터 비전 라이브러리. 이미지 처리, 데이터셋, 모델 등 제공.                                    |
+| torchaudio              | 파이토치용 오디오 처리 라이브러리. 음성 데이터 전처리, 변환 등에 사용.                                      |
+| openai-whisper          | OpenAI의 오픈소스 음성 인식(STT) 모델. 다양한 언어의 음성을 텍스트로 변환.                                 |
+| streamlit               | 파이썬 기반 웹 대화형 앱 개발 프레임워크. 머신러닝/데이터사이언스 앱을 손쉽게 제작/배포 가능.                |
+| streamlit-mic-recorder  | Streamlit용 마이크 입력 컴포넌트. 웹/모바일에서 음성 녹음 및 STT 연동 지원.                                |
+| pyttsx3                 | 오프라인 텍스트-음성 변환(TTS) 라이브러리. 다양한 엔진 지원, 인터넷 연결 불필요.                            |
+| python-dotenv           | .env 환경변수 파일을 파이썬에서 손쉽게 불러오는 라이브러리. 설정값 관리에 용이.                             |
 
 * openai-whisper는 3.11 버전까지 공식적으로 지원됩니다만. 3.09 버전 사용을 추천합니다.
 이를 통해 설치하는 과정에서 환경변수 문제로 인한 error이 발생합니다. 이를 해결하기 위해 환경변수에 값을 추가해줘야 합니다.
