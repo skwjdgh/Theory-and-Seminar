@@ -25,6 +25,8 @@ pip install -r {경로}\requirements.txt
 
 > ❗ `requirements.txt`의 경로에 한글이 포함되어 있으면 에러가 발생할 수 있습니다.
 
+pip install --upgrade streamlit
+# 업데이트 필수
 ---
 
 ## 📦 주요 라이브러리 설명
