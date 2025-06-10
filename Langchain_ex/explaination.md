@@ -1,94 +1,124 @@
+# 🧠 LangChain 기반 개인용 비서 서비스
 
-# 랭체인을 활용한 개인용 비서 서비스
+이 프로젝트는 **LangChain**을 활용하여 로컬에서 동작하는 **개인 비서** 프로토타입입니다.
 
-이 프로그램은 랭체인을 활용해 로컬로 동작하는 개인용 비서의 프로토타입 모델입니다.
-이 마크다운 문서는 이 프로그램의 설치 및 구동을 다루고 있습니다.
-
-
-## 설치 방법
-
-- chain_module.py
-- tool_module.py
-- ui_module.py
-- whisper_module.py
-- main.py
-- requirements.txt
- 
-우선 해당 파일들을 다운받으세요.
+## 📁 파일 구성
 
 ```
-# 파이썬이 설치되어 있다는 가정하에 작성되어 있습니다.
-# 필요한 주요 라이브러리를 한번에 받는 코드입니다.
-
-pip install -r {주소}\requirements.txt
-
-
+├── chain_module.py
+├── tool_module.py
+├── ui_module.py
+├── whisper_module.py
+├── main.py
+└── requirements.txt
 ```
 
-| 라이브러리 이름            | 설명 및 주요 용도                                                                                      |
-|-------------------------|-------------------------------------------------------------------------------------------------------|
-| langchain-core          | LangChain의 핵심 컴포넌트. LLM 애플리케이션의 체인, 프롬프트, 파서 등 기본 기능 제공.                      |
-| langchain-community     | LangChain 오픈소스 커뮤니티에서 제공하는 다양한 통합 및 커넥터 모음.                                      |
-| langchain-ollama        | LangChain과 Ollama(로컬 LLM 서버) 연동 지원. Ollama 모델을 LangChain에서 직접 호출 가능.                   |
-| langgraph               | LangChain 기반 워크플로우 및 상태 관리 프레임워크. 대화 흐름, 에이전트 논리 등 복잡한 그래프 처리에 특화.     |
-| langsmith               | LangChain 앱의 실험, 평가, 모니터링을 위한 플랫폼 연동 패키지.                                            |
-| faiss-cpu               | Facebook Research 개발 벡터 검색 라이브러리. 대규모 임베딩 벡터 유사도 검색에 최적화(CPU 전용).             |
-| torch                   | 파이토치(Pytorch). 딥러닝 모델 학습 및 추론 프레임워크.                                                   |
-| torchvision             | 파이토치용 컴퓨터 비전 라이브러리. 이미지 처리, 데이터셋, 모델 등 제공.                                    |
-| torchaudio              | 파이토치용 오디오 처리 라이브러리. 음성 데이터 전처리, 변환 등에 사용.                                      |
-| openai-whisper          | OpenAI의 오픈소스 음성 인식(STT) 모델. 다양한 언어의 음성을 텍스트로 변환.                                 |
-| streamlit               | 파이썬 기반 웹 대화형 앱 개발 프레임워크. 머신러닝/데이터사이언스 앱을 손쉽게 제작/배포 가능.                |
-| pyttsx3                 | 오프라인 텍스트-음성 변환(TTS) 라이브러리. 다양한 엔진 지원, 인터넷 연결 불필요.                            |
-| python-dotenv           | .env 환경변수 파일을 파이썬에서 손쉽게 불러오는 라이브러리. 설정값 관리에 용이.                             |
+---
 
-* openai-whisper는 3.11 버전까지 공식적으로 지원됩니다만. 3.09 버전 사용을 추천합니다.
-이를 통해 설치하는 과정에서 환경변수 문제로 인한 error이 발생합니다. 이를 해결하기 위해 환경변수에 값을 추가해줘야 합니다.
+## 🛠️ 설치 방법
 
+Python이 설치되어 있다는 전제하에 아래 명령어를 실행하세요:
 
-#### 추가할 경로 - 사용자 이름의 변경이 필요함
+```bash
+pip install -r {경로}\requirements.txt
+```
+
+> ❗ `requirements.txt`의 경로에 한글이 포함되어 있으면 에러가 발생할 수 있습니다.
+
+---
+
+## 📦 주요 라이브러리 설명
+
+| 라이브러리             | 설명 |
+|----------------------|------|
+| `langchain-core`     | LangChain의 핵심 컴포넌트 제공 |
+| `langchain-community`| 다양한 오픈소스 통합 커넥터 모음 |
+| `langchain-ollama`   | LangChain과 Ollama(로컬 LLM) 연동 |
+| `langgraph`          | 대화 흐름 및 상태 그래프 구성용 프레임워크 |
+| `langsmith`          | 평가, 로깅, 모니터링 등 앱 성능 분석 도구 |
+| `faiss-cpu`          | 고속 벡터 유사도 검색 (CPU 전용) |
+| `torch`              | PyTorch 딥러닝 프레임워크 |
+| `torchvision`        | 컴퓨터 비전용 유틸리티 |
+| `torchaudio`         | 오디오 처리 라이브러리 |
+| `openai-whisper`     | 오픈소스 음성 인식(STT) 모델 |
+| `streamlit`          | 웹 기반 인터페이스 구축 프레임워크 |
+| `pyttsx3`            | 오프라인 텍스트 음성 변환 (TTS) |
+| `python-dotenv`      | .env 파일을 통해 환경변수 로드 |
+
+---
+
+## ⚠️ Whisper 설치 문제 해결
+
+- `openai-whisper`는 Python **3.11 이하**만 공식 지원합니다.
+- **Python 3.9** 사용을 권장합니다.
+
+### ✅ 환경변수 설정
+
+다음 경로를 시스템 환경 변수 `Path`에 추가하세요:
+
 ```
 C:\Users\{사용자이름}\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\Scripts
-
-
 ```
-- 위의 폴더 경로를 시스템 환경 변수 Path에 추가합니다.
-- 명령 프롬프트(cmd) 실행
-- pip list를 통해 확인 혹은 명령어 재실행을 통해 에러 발생 확인인
 
+- 추가 후 **새 cmd 창**을 열고 아래 명령어로 정상 설치 여부를 확인하세요:
 
-### whisper 사용을 위한 ffmpeg 설치(streamlit 기본 마이크 사용으로 인해 굳이 필요는 없는 부분임)
-
-#### 추천 빌드 링크
-https://www.gyan.dev/ffmpeg/builds/
-
-- "Release" 버전 중 "ffmpeg-release-essentials.zip" 또는 "full" 버전 다운로드 (보통 essentials로 충분함)
-- 다운받은 zip 파일을 원하는 폴더(예: C:\ffmpeg)에 풀어줍니다.
-- C:\ffmpeg\bin 폴더 경로를 시스템 환경 변수 Path에 추가합니다.
-- 명령 프롬프트(cmd) 실행
-- ffmpeg -version 입력
-
-
-# **환경변수 적용을 위해선 반드시 새 창을 열어야 적용됩니다! **
+```bash
+pip list
 ```
-# 로컬 실행법
+
+---
+
+## 🎙️ ffmpeg 설치 (선택 사항)
+
+> Whisper를 독립적으로 사용할 경우 필요합니다.  
+> Streamlit 마이크 입력만 사용할 경우 생략해도 무방합니다.
+
+### 설치 링크
+
+[🔗 FFmpeg Download - Gyan.dev](https://www.gyan.dev/ffmpeg/builds/)
+
+### 설치 방법
+
+1. `ffmpeg-release-essentials.zip` 다운로드
+2. 예: `C:\ffmpeg` 경로에 압축 해제
+3. `C:\ffmpeg\bin`을 환경 변수 `Path`에 추가
+4. cmd에서 아래 명령어로 설치 확인
+
+```bash
+ffmpeg -version
+```
+
+---
+
+## 🚀 실행 방법
+
+### ✅ 로컬 실행
+
+```bash
 streamlit run main.py
-
-# ex) streamlit run C:\p_assistant\main.py
-# 경로에 한글이 들어있을 경우, 에러가 발생할 수 있습니다..
 ```
 
+> 예시:
+> ```
+> streamlit run C:\p_assistant\main.py
+> ```
+
+💡 **경로에 한글이 포함되어 있으면 실행이 실패할 수 있습니다.**
+
+---
+
+### 🌐 핫스팟(다른 기기 접속 허용)
+
+```bash
+streamlit run main.py --server.address=0.0.0.0 --server.port=8501
 ```
-# 핫스팟 실행법
---server.address=0.0.0.0 --server.port=8501
 
-# --server.address=0.0.0.0: 모든 네트워크 인터페이스에서 접근 허용
-# --server.port=8501: 포트 번호 지정 (필요시 변경 가능)
-# 실행을 위해 로컬서버의 ip 주소를 확인(ipconfig)하여 ex) http://192.168.43.101:8501로 입력하면 접속이 가능함
+| 옵션 | 설명 |
+|------|------|
+| `--server.address=0.0.0.0` | 모든 네트워크 인터페이스에서 접속 허용 |
+| `--server.port=8501`       | 접속 포트 설정 (필요 시 변경 가능) |
+
+```bash
+# IP 주소 확인
+ipconfig
 ```
-이를 실행하여 서버 주소를 확인하고 접속합니다.
-
-
-이 코드는 랭체인의 기능을 설명하기 위해 AI의 도움을 받았습니다.
-
-랭체인에는 이 코드의 기능을 제외하고 다양한 기능을 제공하고 있습니다. 
-외부 데이터 연동, 다양한 툴킷(자연어로 SQL 질의 및 응답, 사용자 입력을 실시간 파이썬 코드로 실행, 실시간 웹 검색 기반 답변 생성), LangSmith 통합기능, 멀티모달 처리(이미지 입력(이미지->텍스트 변환), 혼합 입력 인식 등) 을 제공합니다.
