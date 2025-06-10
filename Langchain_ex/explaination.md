@@ -29,7 +29,6 @@ pip install -r {주소}\requirements.txt
 | torchaudio              | 파이토치용 오디오 처리 라이브러리. 음성 데이터 전처리, 변환 등에 사용.                                      |
 | openai-whisper          | OpenAI의 오픈소스 음성 인식(STT) 모델. 다양한 언어의 음성을 텍스트로 변환.                                 |
 | streamlit               | 파이썬 기반 웹 대화형 앱 개발 프레임워크. 머신러닝/데이터사이언스 앱을 손쉽게 제작/배포 가능.                |
-| streamlit-mic-recorder  | Streamlit용 마이크 입력 컴포넌트. 웹/모바일에서 음성 녹음 및 STT 연동 지원.                                |
 | pyttsx3                 | 오프라인 텍스트-음성 변환(TTS) 라이브러리. 다양한 엔진 지원, 인터넷 연결 불필요.                            |
 | python-dotenv           | .env 환경변수 파일을 파이썬에서 손쉽게 불러오는 라이브러리. 설정값 관리에 용이.                             |
 
