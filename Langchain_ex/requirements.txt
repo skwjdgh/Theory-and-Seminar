@@ -13,7 +13,7 @@ faiss-cpu==1.7.4
 torch>=2.3.0
 torchvision>=0.18.0
 torchaudio>=2.3.0
-openai-whisper @ git+https://github.com/openai/whisper.git
+openai-whisper
 
 # Streamlit 기반 UI
 streamlit==1.35.0
