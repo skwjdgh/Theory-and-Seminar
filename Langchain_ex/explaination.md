@@ -112,8 +112,12 @@ streamlit run main.py
 ### 🌐 핫스팟(다른 기기 접속 허용)
 
 ```bash
-streamlit run C:\p_assistant\main.py --server.address=0.0.0.0 --server.port=8501
+streamlit run main.py --server.address=0.0.0.0 --server.port=8501
 ```
+> 예시:
+> ```
+> streamlit run C:\p_assistant\main.py --server.address=0.0.0.0 --server.port=8501
+> ```
 
 | 옵션 | 설명 |
 |------|------|
