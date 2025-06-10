@@ -1,0 +1,24 @@
+# requirements.txt (Updated)
+# Core LangChain + LangGraph
+langchain-core==0.3.64
+langchain-community==0.3.24
+langchain-ollama==0.2.1
+langgraph==0.2.20
+langsmith==0.3.45
+
+# Vector Store
+faiss-cpu==1.7.4
+
+# Torch & Whisper (CPU 전용)
+torch>=2.3.0
+torchvision>=0.18.0
+torchaudio>=2.3.0
+openai-whisper @ git+https://github.com/openai/whisper.git
+
+# Streamlit 기반 UI
+streamlit==1.35.0
+streamlit-mic-recorder==0.0.7
+
+# TTS / 환경
+pyttsx3==2.90
+python-dotenv==1.0.0
