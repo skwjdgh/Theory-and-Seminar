@@ -8,12 +8,11 @@
 </h1>
 
 <p align = "center">
-  <img align = "center" src = "https://capsule-render.vercel.app/api?type=blur&height=200&color=gradient&text=Theory%20and%20Seminar&descAlign=59&section=header">
+  <img align = "center" src = "https://capsule-render.vercel.app/api?type=blur&height=200&color=gradient&text=Software%20Engineering&descAlign=59&section=header">
 
 
 ## 🗂 문서 개요
 
-이 저장소는 수업 외적으로 AI에 대해 학습하거나 전시회를 방문했던 내용을 저장하는 공간입니다..
 
 ---
 
